@@ -1,11 +1,18 @@
 import firebase from "firebase";
 import {Actions} from "react-native-router-flux"
 import {
+    CLEAR_FORM_INPUTS,
     EMPLOYEE_UPDATE,
     EMPLOYEE_CREATE,
     EMPLOYEES_FETCH_SUCCESS,
     EMPLOYEES_SAVE_SUCCESS
 } from "./types";
+
+const clearFormInputs = () => {
+    return {
+        type: CLEAR_FORM_INPUTS,
+    };
+};
 
 const employeeUpdate = ({ prop, value }) => {
     return {
@@ -64,4 +71,4 @@ const employeeDelete = ({ uid }) => {
     }
 }
 
-export { employeeUpdate, employeeCreate, employeesfetch, employeeSave, employeeDelete };
+export { clearFormInputs, employeeUpdate, employeeCreate, employeesfetch, employeeSave, employeeDelete };

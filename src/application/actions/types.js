@@ -4,6 +4,7 @@ const LOGIN_USER_SUCCESS = "login_user_success";
 const LOGIN_USER_FAIL = "login_user_fail";
 const LOGIN_USER = "login_user";
 
+const CLEAR_FORM_INPUTS = "clear_form_inputs"; 
 const EMPLOYEE_UPDATE = "employee_update";
 const EMPLOYEE_CREATE = "employee_create";
 const EMPLOYEES_FETCH_SUCCESS = "employees_fetch_success";
@@ -15,6 +16,7 @@ export {
     LOGIN_USER_SUCCESS, 
     LOGIN_USER_FAIL, 
     LOGIN_USER, 
+    CLEAR_FORM_INPUTS,
     EMPLOYEE_UPDATE,
     EMPLOYEE_CREATE,
     EMPLOYEES_FETCH_SUCCESS,

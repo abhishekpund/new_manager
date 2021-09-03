@@ -10,6 +10,8 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => 
       <TextInput
         secureTextEntry={secureTextEntry}
         placeholder={placeholder}
+        defaultValue=""
+        placeholderTextColor="grey"
         autoCorrect={false}
         style={inputStyle}
         value={value}

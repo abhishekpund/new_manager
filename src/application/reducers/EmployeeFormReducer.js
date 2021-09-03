@@ -1,7 +1,8 @@
 import {
     EMPLOYEE_UPDATE,
     EMPLOYEE_CREATE,
-    EMPLOYEES_SAVE_SUCCESS
+    EMPLOYEES_SAVE_SUCCESS,
+    CLEAR_FORM_INPUTS
 } from "../actions/types";
 
 const INITIAL_STATE = {
@@ -21,6 +22,8 @@ export default (state = INITIAL_STATE, action) => {
             // To clear inputs after saving employee info.
             return INITIAL_STATE;
         case EMPLOYEES_SAVE_SUCCESS:
+            return INITIAL_STATE;
+        case CLEAR_FORM_INPUTS:
             return INITIAL_STATE;
         default:
             return state;

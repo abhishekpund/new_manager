@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {connect} from "react-redux";
-import {employeeUpdate,employeeCreate} from "../application/actions";
+import {clearFormInputs,employeeUpdate,employeeCreate} from "../application/actions";
 import {Card,CardSection,Button} from "../infrastructure/components/common";
 import EmployeeForm from "../infrastructure/components/EmployeeForm";
 
@@ -8,6 +8,10 @@ class EmployeeCreate extends Component {
     onButtonPress = () => {
         const { name, phone, shift } = this.props;
         this.props.employeeCreate({ name, phone, shift: shift || "Monday" });
+    }
+
+    componentDidMount() {
+        this.props.clearFormInputs();
     }
 
     render() {
@@ -29,4 +33,4 @@ const mapStateToProps = (state) => {
 
     return { name, phone, shift };
 };
-export default connect(mapStateToProps, { employeeUpdate, employeeCreate })(EmployeeCreate);
+export default connect(mapStateToProps, { clearFormInputs, employeeUpdate, employeeCreate })(EmployeeCreate);
